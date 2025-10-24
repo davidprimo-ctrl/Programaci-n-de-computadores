@@ -1,8 +1,5 @@
-"""
-Gestión de Tareas (To-Do List)
-Autor: [Tu Nombre]
-Descripción: Aplicación de consola para agregar, listar y eliminar tareas.
-"""
+"""Gestión de Tareas
+Aplicación de consola para agregar, listar y eliminar tareas."""
 
 def mostrar_menu():
     """Muestra el menú de opciones en consola."""
@@ -71,3 +68,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
