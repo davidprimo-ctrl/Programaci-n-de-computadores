@@ -2,7 +2,6 @@
 Aplicación de consola para agregar, listar, editar y eliminar tareas."""
 
 def mostrar_menu():
-    """Muestra el menú de opciones en consola."""
     print("\n=== MENÚ ===")
     print("1. Agregar tarea")
     print("2. Ver tareas")
@@ -11,7 +10,6 @@ def mostrar_menu():
     print("5. Salir")
 
 def agregar_tarea(tareas):
-    """Agrega una nueva tarea a la lista."""
     tarea = input("Ingrese la tarea: ").strip()
     if tarea == "":
         print("La tarea no puede estar vacía.")
@@ -43,10 +41,9 @@ def agregar_tarea(tareas):
             print("Opción inválida. Por favor, seleccione 1, 2 o 3.")
     
     tareas.append({"descripcion": tarea, "fecha": fecha, "prioridad": prioridad})
-    print(f"Tarea agregada con éxito (Prioridad: {prioridad}).")
+    print(f"Tarea agregada con éxito.")
 
 def ver_tareas(tareas):
-    """Muestra todas las tareas almacenadas."""
     print("\n Tareas:")
     if len(tareas) > 0:
         for i, t in enumerate(tareas, 1):
@@ -55,7 +52,6 @@ def ver_tareas(tareas):
         print("No hay tareas registradas.")
 
 def eliminar_tarea(tareas):
-    """Elimina una tarea según el número ingresado por el usuario."""
     if len(tareas) == 0:
         print("No hay tareas para eliminar.")
         return
@@ -70,12 +66,9 @@ def eliminar_tarea(tareas):
         print("Entrada inválida. Debe ser un número.")
 
 def editar_tarea(tareas):
-    """Edita una tarea existente."""
     if len(tareas) == 0:
         print("No hay ninguna tarea para editar.")
         return
-    
-    ver_tareas(tareas)
     
     try:
         indice = int(input("\nIngrese el número de la tarea a editar: "))
@@ -171,7 +164,6 @@ def editar_tarea(tareas):
         print("Entrada inválida. Debe ser un número.")
 
 def main():
-    """Función principal del programa."""
     tareas = []
     while True:
         mostrar_menu()
